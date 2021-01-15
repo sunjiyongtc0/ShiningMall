@@ -1,0 +1,80 @@
+package com.sjy.shining.service.impl;
+
+import com.sjy.shining.dao.CommentDao;
+import com.sjy.shining.dao.CommentPictureDao;
+import com.sjy.shining.entity.CommentEntity;
+import com.sjy.shining.service.CommentService;
+import com.sjy.shining.utils.Base64Util;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * 用户评价Service实现类
+ *
+ */
+@Service("commentService")
+public class CommentServiceImpl implements CommentService {
+    @Autowired
+    private CommentDao commentDao;
+    @Autowired
+    private CommentPictureDao commentPictureDao;
+
+    @Override
+    public CommentEntity queryObject(Integer id) {
+        return commentDao.queryObject(id);
+    }
+
+    @Override
+    public List<CommentEntity> queryList(Map<String, Object> map) {
+        List<CommentEntity> commentEntities = commentDao.queryList(map);
+        if (null != commentEntities && commentEntities.size() > 0) {
+            for (CommentEntity commentEntity : commentEntities) {
+                commentEntity.setContent(Base64Util.decode(commentEntity.getContent()));
+            }
+        }
+        return commentEntities;
+    }
+
+    @Override
+    public int queryTotal(Map<String, Object> map) {
+        return commentDao.queryTotal(map);
+    }
+
+    @Override
+    public int save(CommentEntity comment) {
+        return commentDao.save(comment);
+    }
+
+    @Override
+    public int update(CommentEntity comment) {
+        return commentDao.update(comment);
+    }
+
+    @Override
+    @Transactional
+    public int delete(Integer id) {
+        //删除评论同时删除评论的图片
+        commentPictureDao.deleteByCommentId(id);
+        return commentDao.delete(id);
+    }
+
+    @Override
+    public int deleteBatch(Integer[] ids) {
+        return commentDao.deleteBatch(ids);
+    }
+
+    @Override
+    public int toggleStatus(CommentEntity comment) {
+        CommentEntity commentEntity = queryObject(comment.getId());
+        if (commentEntity.getStatus() == 1) {
+            commentEntity.setStatus(0);
+        } else if (commentEntity.getStatus() == 0) {
+            commentEntity.setStatus(1);
+        }
+        return commentDao.update(commentEntity);
+    }
+}

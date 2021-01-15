@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sjy.shining.dao.ScheduleJobLogDao">
+	<select id="selectScheduleJobLogPage" resultType="com.sjy.shining.entity.ScheduleJobLogEntity">
+		SELECT
+		T.log_id,
+		T.job_id,
+		T.bean_name,
+		T.method_name,
+		T.params,
+		T.status,
+		T.error,
+		T.times,
+		T.create_time
+		FROM schedule_job_log T
+		WHERE 1=1
+		<if test="params.beanName != null and params.beanName.trim() != ''">
+			AND T.bean_name LIKE '%${params.beanName}%'
+		</if>
+		<if test="params.methodName != null and params.methodName.trim() != ''">
+			AND T.method_name LIKE '%${params.methodName}%'
+		</if>
+	</select>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sjy.shining.dao.ScheduleJobDao">
+
+	<!-- 批量更新状态 -->
+	<update id="updateBatch">
+		UPDATE schedule_job SET status = #{status} WHERE job_id IN
+		<foreach item="jobId" collection="list"  open="(" separator="," close=")">
+			#{jobId}
+		</foreach>
+	</update>
+
+	<select id="selectScheduleJobPage" resultType="com.sjy.shining.entity.ScheduleJobEntity">
+		SELECT
+		T.job_id,
+		T.bean_name,
+		T.method_name,
+		T.params,
+		T.cron_expression,
+		T.status,
+		T.remark,
+		T.create_time
+		FROM schedule_job T
+		WHERE 1=1
+		<if test="params.beanName != null and params.beanName.trim() != ''">
+			AND T.bean_name LIKE '%${params.beanName}%'
+		</if>
+	</select>
+</mapper>

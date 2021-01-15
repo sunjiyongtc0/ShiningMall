@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<#include "/page/sys/header.html">
+<head>
+    <title>欢迎页</title>
+	<style>
+		.pro_name a{color: #4183c4;}
+		.osc_git_title{background-color: #fff;}
+		.osc_git_box{background-color: #fff;}
+		.osc_git_box{border-color: #E3E9ED;margin: 20px;}
+		.osc_git_info{color: #666;}
+		.osc_git_main a{color: #9B9B9B;}
+	</style>
+</head>
+<body>
+<div  id="ibox">
+    <div >
+        <div class="ibox-title">
+            <h1>概述介绍</h1>
+        </div>
+        <div style="width: 100%;height: 240px"  >
+            <Carousel v-model="value" loop>
+                <CarouselItem>
+                    <div class="demo-carousel">1</div>
+                </CarouselItem>
+                <CarouselItem>
+                    <div class="demo-carousel">2</div>
+                </CarouselItem>
+                <CarouselItem>
+                    <div class="demo-carousel">3</div>
+                </CarouselItem>
+                <CarouselItem>
+                    <div class="demo-carousel">4</div>
+                </CarouselItem>
+            </Carousel>
+        </div>
+    </div>
+    <div >
+        <div >
+            <h1>说明内容</h1>
+        </div>
+        <div class="ibox-content">
+            <div class="signin-info">
+                <ul>
+                    <li>- 暂无其他更新内容</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var vm = new Vue({
+        el: '#ibox',
+        data: {
+            value: 0,
+            imgPath:[
+                "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201303%2F16%2F173710lvx470i4348z6i6z.jpg&refer=http%3A%2F%2Fattach.bbs.miui.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612105678&t=7f288b4b47daaaa99e9f5fac27b8b963",
+                "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3864366174,3024802681&fm=26&gp=0.jpg",
+                "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2926199504,3558053336&fm=26&gp=0.jpg",
+                "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1114%2F0FR0104017%2F200FQ04017-6-1200.jpg&refer=http%3A%2F%2Fpic.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612105765&t=641ed16c3b3d490d574486956ff84c65"
+            ]
+        }
+    })
+
+</script>
+</body>
+</html>
