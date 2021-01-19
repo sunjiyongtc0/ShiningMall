@@ -97,4 +97,16 @@ public class ApiUserService {
         }
         return result;
     }
+
+    public UserVo loginByH5(String mobile, String password) {
+        UserVo user = queryByMobile(mobile);
+        Assert.isNull(user, "手机号或密码错误");
+
+        //密码错误
+        if (!user.getPassword().equals(DigestUtils.sha256Hex(password))) {
+            throw new RRException("手机号或密码错误");
+        }
+
+        return user;
+    }
 }

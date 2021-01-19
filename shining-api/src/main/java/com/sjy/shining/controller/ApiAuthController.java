@@ -205,4 +205,36 @@ public class ApiAuthController extends ApiBaseAction {
             return toResponsFail("登录失败");
         }
     }
+
+    /**
+     * 微信登录
+     */
+    @ApiOperation(value = "H5登录")
+    @IgnoreAuth
+    @PostMapping("login_by_h5")
+    public Object loginByH5(String mobile, String password) {
+        Assert.isBlank(mobile, "手机号不能为空");
+        Assert.isBlank(password, "密码不能为空");
+        UserVo userVo=userService.loginByH5(mobile, password);
+        JSONObject userInfo=new JSONObject();
+        userInfo.put("nickName",userVo.getNickname());
+        userInfo.put("userName",userVo.getUsername());
+        userInfo.put("avatarUrl",userVo.getAvatar());
+
+        //用户登录
+        //生成token
+        Map<String, Object> map = tokenService.createToken(userVo.getUserId());
+        String token = MapUtils.getString(map, "token");
+
+        if (StringUtils.isNullOrEmpty(token)) {
+            return toResponsFail("登录失败");
+        }
+
+        Map<String, Object> resultObj = new HashMap<String, Object>();
+
+        resultObj.put("token", token);
+        resultObj.put("userInfo", userInfo);
+        resultObj.put("userId", userVo.getUserId());
+        return  toResponsSuccess(resultObj);
+    }
 }
