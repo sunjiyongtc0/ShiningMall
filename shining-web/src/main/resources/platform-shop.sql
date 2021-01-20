@@ -380,7 +380,7 @@ CREATE TABLE `nideshop_attribute_category` (
   `name` varchar(60) NOT NULL DEFAULT '',
   `enabled` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '1开启; 0关闭;',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1036003 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1036004 DEFAULT CHARSET=utf8;
 
 /*Data for the table `nideshop_attribute_category` */
 
@@ -393,7 +393,8 @@ insert  into `nideshop_attribute_category`(`id`,`name`,`enabled`) values
 (1015000,'家具',1),
 (1017000,'宠物',1),
 (1036000,'夏凉',1),
-(1036002,'活动',0);
+(1036002,'活动',0),
+(1036003,'数码',1);
 
 /*Table structure for table `nideshop_brand` */
 
@@ -414,7 +415,7 @@ CREATE TABLE `nideshop_brand` (
   `new_sort_order` tinyint(2) unsigned NOT NULL DEFAULT '10' COMMENT '排序',
   PRIMARY KEY (`id`),
   KEY `is_show` (`is_show`)
-) ENGINE=InnoDB AUTO_INCREMENT=1046001 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1046002 DEFAULT CHARSET=utf8;
 
 /*Data for the table `nideshop_brand` */
 
@@ -467,7 +468,8 @@ insert  into `nideshop_brand`(`id`,`name`,`list_pic_url`,`simple_desc`,`pic_url`
 (1039001,'京瓷制造商','http://yanxuan.nosdn.127.net/3dda530605e3ab1c82d5ed30f2489473.png','严选想为你的厨房生活，带来新鲜感和活力，\n深入全国各地，选择日本京瓷等品牌代工厂，\n打造钻石系列厨具，颜值与品质兼具。','http://yanxuan.nosdn.127.net/de8c967f47c47e48aaaf461a5e24bc4c.jpg',38,1,89.00,'http://yanxuan.nosdn.127.net/3dda530605e3ab1c82d5ed30f2489473.png',0,'',10),
 (1040000,'Tescom制造商','http://yanxuan.nosdn.127.net/c17cd65971189fdc28f5bd6b78f657a7.png','严选为打造时尚健康的个护电器，\n选择Tescom品牌制造商，全球最大个护电器工厂之一，\n拥有20年经验，出口180多个国家，品质有保障。','http://yanxuan.nosdn.127.net/21ff3c560b263cf45dd2b8c92091768b.jpg',15,1,59.00,'http://yanxuan.nosdn.127.net/c17cd65971189fdc28f5bd6b78f657a7.png',0,'',10),
 (1041000,'BCBG制造商','http://yanxuan.nosdn.127.net/b9072023afd3621714fd5c49f140fca8.png','严选从产品源头开始，每道工序质量把关，\n选择美国知名品牌BCBG的制造商合作，\n严谨匠心，致力于优质柔滑的睡衣穿搭产品。','http://yanxuan.nosdn.127.net/3f2a66543f4c6e2abd5de2d280ff7960.png',36,1,99.00,'http://yanxuan.nosdn.127.net/b9072023afd3621714fd5c49f140fca8.png',0,'',10),
-(1046000,'Police制造商','http://yanxuan.nosdn.127.net/66e2cb956a9dd1efc7732bea278e901e.png','严选团队选定Police品牌制造商合作，\n有11年眼镜生产资质，兼顾品质与品味，\n为你带来专业时尚的墨镜。','http://yanxuan.nosdn.127.net/d48930cbb91f0e3adafe5341ce270a4e.png',6,1,109.00,'http://yanxuan.nosdn.127.net/66e2cb956a9dd1efc7732bea278e901e.png',0,'',10);
+(1046000,'Police制造商','http://yanxuan.nosdn.127.net/66e2cb956a9dd1efc7732bea278e901e.png','严选团队选定Police品牌制造商合作，\n有11年眼镜生产资质，兼顾品质与品味，\n为你带来专业时尚的墨镜。','http://yanxuan.nosdn.127.net/d48930cbb91f0e3adafe5341ce270a4e.png',6,1,109.00,'http://yanxuan.nosdn.127.net/66e2cb956a9dd1efc7732bea278e901e.png',0,'',10),
+(1046001,'华为','http://yaaiya.xyz/data/shining/ad/20210111/1010383862aa02.jpg','科技缔造艺术之美;澎湃动力，一触即发；超感知徕卡电影影像，与光影同行','http://yaaiya.xyz/data/shining/ad/20210111/101323743f8dab.jpg',1,1,6499.00,'http://yaaiya.xyz/data/shining/ad/20210111/101538706312.jpg',1,'http://yaaiya.xyz/data/shining/ad/20210111/1015438965a3f3.jpg',2);
 
 /*Table structure for table `nideshop_cart` */
 
@@ -519,7 +521,7 @@ CREATE TABLE `nideshop_category` (
   `front_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `parent_id` (`parent_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1036005 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1036007 DEFAULT CHARSET=utf8;
 
 /*Data for the table `nideshop_category` */
 
@@ -593,12 +595,12 @@ insert  into `nideshop_category`(`id`,`name`,`keywords`,`front_desc`,`parent_id`
 (1020009,'外衣','','外衣，是你面对这个世界的铠甲',1010000,10,10,1,'http://yanxuan.nosdn.127.net/883d89e54a9287569a201eca388a7cda.png','','','http://yanxuan.nosdn.127.net/647f7c39eb7c353958274a59fd821d03.png','L2',0,'穿出时尚感'),
 (1020010,'衬衫','','挺拔而不束缚',1010000,7,7,1,'http://yanxuan.nosdn.127.net/94aa4a4814e2a7a97639438f1d52dcee.png','','','http://yanxuan.nosdn.127.net/7927f8422c341f7353041a30d01045a2.png','L2',0,'细节讲究，合身剪裁'),
 (1021000,'节日礼盒','','遇见节日的美好',1012000,8,9,1,'http://yanxuan.nosdn.127.net/e7b37b1ed5c18d63dc3e6c3f1aa85d8a.png','','','http://yanxuan.nosdn.127.net/bbb6f0ab4f6321121250c12583b0ff9a.png','L2',0,'限量礼盒限时发售'),
-(1022000,'数码','','享受安全智能的科技生活',1008000,9,9,1,'http://yanxuan.nosdn.127.net/3ec003761d346bc866de2ec249d7ff19.png','','','http://yanxuan.nosdn.127.net/c33b13875a86da535c935e3d454a6fd2.png','L2',0,'智能硬件，匠心出品'),
+(1022000,'数码','','享受安全智能的科技生活',1036005,9,9,1,'http://yanxuan.nosdn.127.net/3ec003761d346bc866de2ec249d7ff19.png','','','http://yanxuan.nosdn.127.net/c33b13875a86da535c935e3d454a6fd2.png','L2',0,'智能硬件，匠心出品'),
 (1023000,'厨房小电','','省心省力，厨房高效能手',1005001,8,8,1,'http://yanxuan.nosdn.127.net/521bd0c02d283b80ba49e73ca84df250.png','','','http://yanxuan.nosdn.127.net/c09d784ba592e4fadabbaef6b2e95a95.png','L2',0,'厨房里的省心小电器'),
 (1025000,'礼品卡','','传递高品质生活美学',1019000,11,11,1,'http://yanxuan.nosdn.127.net/bb9232716b2fc96d9bdbac4955360dfa.png','','','http://yanxuan.nosdn.127.net/1266f0767a3f67298a40574df0d177fb.png','L2',0,'送礼、福利首选'),
 (1027000,'茗茶','','一品茶香，品茗即是观心，饮茶涤净尘虑',1005002,7,7,1,'http://yanxuan.nosdn.127.net/0c5af0575176c4a3023783bef7a87a0f.png','','','http://yanxuan.nosdn.127.net/cfeb623929f3936cc882ffc6a9a2e927.png','L2',0,'一品茶香，品茗即是观心，饮茶涤净尘虑'),
 (1027001,'果干','','品尝与收获到的是自然的味道',1005002,4,4,1,'http://yanxuan.nosdn.127.net/60f4ae2beef4754347fa36208f84efab.png','','','http://yanxuan.nosdn.127.net/4cdbf6ae196671cca154fe16e152d8d4.png','L2',0,'品尝与收获到的是自然的味道'),
-(1028001,'唱片','','瑞鸣音乐大师匠心打造',1019000,8,8,1,'http://yanxuan.nosdn.127.net/71feb3efd3eaee01a74e8aa78430de9d.png','','','http://yanxuan.nosdn.127.net/3b69079ea27f90b4f539e8c3b76680f5.png','L2',0,'经典音乐，用心典藏，瑞鸣音乐大师匠心打造'),
+(1028001,'唱片','','瑞鸣音乐大师匠心打造',1036005,8,8,1,'http://yanxuan.nosdn.127.net/71feb3efd3eaee01a74e8aa78430de9d.png','','','http://yanxuan.nosdn.127.net/3b69079ea27f90b4f539e8c3b76680f5.png','L2',0,'经典音乐，用心典藏，瑞鸣音乐大师匠心打造'),
 (1032000,'魔兽世界','','魔兽世界周边',1019000,1,1,1,'http://yanxuan.nosdn.127.net/336f0186a9920eb0f93a3912f3662ffe.png','','','http://yanxuan.nosdn.127.net/becfba90e8a5c95d403b8a6b9bb77825.png','L2',0,'艾泽拉斯的冒险，才刚刚开始'),
 (1032001,'炉石传说','','炉石传说周边',1019000,2,2,1,'http://yanxuan.nosdn.127.net/97937fcf2defb864d9e53d98a337d78a.png','','','http://yanxuan.nosdn.127.net/b5af3f6bfcbeb459d6c448ba87f8cc35.png','L2',0,'快进来坐下吧，看看酒馆的新玩意'),
 (1032002,'守望先锋','','守望先锋周边',1019000,3,3,1,'http://yanxuan.nosdn.127.net/8cab7bf1225dc9893bd9de06fc51921d.png','','','http://yanxuan.nosdn.127.net/a562f05bf38f5ee478fefb81856aad3d.png','L2',0,'物美价廉的补给箱'),
@@ -616,7 +618,9 @@ insert  into `nideshop_category`(`id`,`name`,`keywords`,`front_desc`,`parent_id`
 (1036001,'眼镜','','实用加时尚，造型百搭单品',1012000,9,10,1,'http://yanxuan.nosdn.127.net/97f5f75ea1209dfbb85e91932d26c3ed.png','','','http://yanxuan.nosdn.127.net/c25fb420ccb6f692a2d16f1740b60d21.png','L2',0,'实用加时尚，造型百搭单品'),
 (1036002,'汽车用品','','给你的爱车添装备',1012000,10,10,1,'http://yanxuan.nosdn.127.net/382cda1ef9cca77d99bcef05070d7db0.png','','','http://yanxuan.nosdn.127.net/552e943e585a999169fdbc57b59524d6.png','L2',0,'给你的爱车添装备'),
 (1036003,'调味','','烹饪必备，美食调味',1005002,9,9,1,'http://yanxuan.nosdn.127.net/2ae44a3944f2bc737416e1cff3d4bcef.png','','','http://yanxuan.nosdn.127.net/13d58949a8c72ec914b5ef63ac726a43.png','L2',0,'烹饪必备，美食调味'),
-(1036004,'大话西游','','大话西游正版周边',1019000,9,8,1,'http://yanxuan.nosdn.127.net/b60618db213322bdc2c5b1208655bd7e.png','','','http://yanxuan.nosdn.127.net/470a017f508e9a18f3068be7b315e14b.png','L2',0,'大话西游正版周边');
+(1036004,'大话西游','','大话西游正版周边',1019000,9,8,1,'http://yanxuan.nosdn.127.net/b60618db213322bdc2c5b1208655bd7e.png','','','http://yanxuan.nosdn.127.net/470a017f508e9a18f3068be7b315e14b.png','L2',0,'大话西游正版周边'),
+(1036005,'科技','','数码，电子',0,12,10,1,'http://yaaiya.xyz/data/shining/ad/20210107/145547901cf3b1.jpg','http://yaaiya.xyz/data/shining/ad/20210107/145859987e58e8.jpg','http://yaaiya.xyz/data/shining/ad/20210107/150203593d1ccc.jpg','http://yaaiya.xyz/data/shining/ad/20210107/1502119917ef35.jpg','L1',0,'科技，智能'),
+(1036006,'手机',NULL,'各类手机品牌',1036005,3,3,1,'http://yaaiya.xyz/data/shining/ad/20210107/16263378703f21.jpg','','http://yaaiya.xyz/data/shining/ad/20210107/16263846829768.jpg','http://yaaiya.xyz/data/shining/ad/20210107/162709773772e1.jpg','L2',0,'新品手机发布，全网最低');
 
 /*Table structure for table `nideshop_channel` */
 
@@ -712,7 +716,7 @@ CREATE TABLE `nideshop_coupon` (
   `min_goods_amount` decimal(10,2) unsigned DEFAULT '0.00',
   `min_transmit_num` int(4) DEFAULT NULL COMMENT '转发次数',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 /*Data for the table `nideshop_coupon` */
 
@@ -722,7 +726,8 @@ insert  into `nideshop_coupon`(`id`,`name`,`type_money`,`send_type`,`min_amount`
 (4,'新用户注册5元',5.00,4,10.00,0.00,'2017-08-28 11:50:51','2020-12-02 11:50:56','2017-06-14 11:50:56','2020-12-02 11:50:56',360.00,NULL),
 (7,'满88元包邮',0.00,7,88.00,0.00,'2017-08-28 11:50:51','2020-12-02 11:50:56','2017-05-01 16:50:40','2019-11-27 16:50:48',0.00,NULL),
 (8,'满1000减20元',20.00,0,1000.00,0.00,'2017-08-28 11:51:49','2020-09-29 11:51:53','2017-05-01 16:50:40','2019-11-27 16:50:48',500.00,NULL),
-(9,'满20元减1元',1.00,6,20.00,0.00,'2017-08-28 11:51:49','2020-09-29 11:51:53','2017-05-01 16:50:40','2019-11-27 16:50:48',20.00,10);
+(9,'满20元减1元',1.00,6,20.00,0.00,'2017-08-28 11:51:49','2020-09-29 11:51:53','2017-05-01 16:50:40','2019-11-27 16:50:48',20.00,10),
+(10,'新年新用户',30.00,4,50.00,0.00,'2021-01-11 00:00:00','2021-02-11 00:00:00','2021-01-11 00:00:00','2022-01-11 00:00:00',50.00,NULL);
 
 /*Table structure for table `nideshop_coupon_goods` */
 
@@ -822,7 +827,7 @@ CREATE TABLE `nideshop_goods` (
   KEY `brand_id` (`brand_id`),
   KEY `goods_number` (`goods_number`),
   KEY `sort_order` (`sort_order`)
-) ENGINE=InnoDB AUTO_INCREMENT=1181001 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1181002 DEFAULT CHARSET=utf8;
 
 /*Data for the table `nideshop_goods` */
 
@@ -1065,7 +1070,8 @@ insert  into `nideshop_goods`(`id`,`category_id`,`goods_sn`,`name`,`brand_id`,`g
 (1155015,1008015,'1155015','绿豆糕 80克（4枚入）',0,100,'','细腻松软，入口绵柔','',1,'2017-08-30 11:40:11',6,0,0,0.00,0.00,1,'件','http://yanxuan.nosdn.127.net/67d52acd78bf685bb5982bcac47ca01a.jpg','http://yanxuan.nosdn.127.net/66b9f1638c0517d179262f14ed1345f9.png',12.90,7353,1162102,0.00,'限时购','',0.00,0,0,0,14.19,NULL,NULL,NULL,NULL),
 (1156006,1012001,'1156006','20寸 全铝镁合金登机箱',0,100,'','100%铝镁合金，超薄坚固','',1,'2017-08-30 11:40:11',3,0,0,0.00,0.00,0,'件','http://yanxuan.nosdn.127.net/d1ab558679fb96508c0d3991c4e8b5d9.jpg','http://yanxuan.nosdn.127.net/ea5b0a572b35089446fba491db7fbbc3.png',699.00,741,1165011,0.00,'限时购','',0.00,0,0,0,768.90,NULL,NULL,NULL,NULL),
 (1166008,1005007,'1166008','Carat钻石 不粘厨具组合',0,100,'','钻石涂层，不粘锅锅具组','',1,'2017-08-30 11:40:11',5,0,0,0.00,0.00,1,'只','http://yanxuan.nosdn.127.net/056baf67bb8cc9a4f2544ac5954ab67c.jpg','http://yanxuan.nosdn.127.net/615a16e899e01efb780c488df4233f48.png',459.00,889,1178050,0.00,'限时购','',0.00,0,0,0,504.90,NULL,1,NULL,NULL),
-(1181000,1008008,'1181000','母亲节礼物-舒适安睡组合',1001020,100,'','安心舒适是最好的礼物','<p><img src=\"http://yanxuan.nosdn.127.net/3ddfe10db43f7df33ba82ae7570ada80.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/7682b7930b4776ce032f509c24a74a1e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e0bb6a50e27681925c5bb26bceb67ef4.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/ba63b244c74ce06fda82bb6a29cc0f71.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/3c7808c3a4769bad5af4974782f08654.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/71798aaac23a91fdab4d77e1b980a4df.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c88cbb2dd2310b732571f49050fe4059.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/5dfdcd654e0f3076f7c05dd9c19c15ea.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/bd55d6ef7af69422d8d76af10ee70156.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/bae571b22954c521b35e446d652edc1d.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e709c4d9e46d602a4d2125e47110f6ae.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/83e41915035c418db177af8b1eca385c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/f42c561e6935fe3e0e0873653da78670.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/8317726fbae80b98764dc4c6233a913e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/ba904b7c948b8015db2171435325270f.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/4969c73d0d8f29bffb69529c96ca4889.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/d80b9b8c5c31031d1cd5357e48748632.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/3fe79bdae40662a7b1feed3179d3dd1f.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/79eef059963b12479f65e782d1dca128.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e5a8f64f4297ccc01b41df98b0f252c8.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/a940b9e9525c4861407e4c3b07b02977.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/224b8b81cbe12e4ad060a50f1e26601a.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/85e151647452fad718effb7b1adc18e2.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/d47444ff3bb9dc0aa4ab1f9b84d83768.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/136262743f0c849cc0c55c8e7963dd7e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/331a97cbaff5b25a3b08ed7cdfe29df9.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/89b450aa0a8afe1db566dcad926f1fe8.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c1cf94f13b7280a97e751cebe573fa78.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/1822c23def83b77e7607c24237eeec74.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/2af234312b3914d6d0bc316f92134614.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c4f8ab2b3813275d954a8bedcf902d26.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/42f18842ff0c92ed849c4401ae47bb61.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/a8ea64a35799e50ab31ecb65345fe8f4.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/18759fa90cd153bdd744280807c3c155.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/431f00d068a8e747959deb3b7bdd495a.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/5bd3b44f1f4c627bfa39f7809e866ec6.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/7fc36778fe2f6129b9c26e8298c5be7e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c568432e3d5ab6786cd9dcae8008891b.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/ec82ff5aecafa48807117da68cce2ce9.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/b8eccbed570da595e6f8a71ed4abc42c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/9cae1fed6ecefcd61435fe6e2c700fd6.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e306a418f82777399f5e88b93cca22db.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/a66d717084e23864ce079f936557709f.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/6ae06c6505cdbf87a0210fe3b8727d5f.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/58ac2086725b0ba2fe800195f274a0b4.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/5e2e9d9eb099647fbe041ec6645ac034.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/8154357c0fab82bd4e67cda9aaa128c0.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/4325763b738ec3183ecf0d82b2b28e32.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/06d8ea9d10035a00f26c5c52cc601ca7.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/499f30b9e69b5dddf3db36f105756111.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/ed7e1733d54e711a560edb3a76f1a60c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/b6474347eebdb917d2e827fd526dd01c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/b2c0691f9204c5ebc94b4ff678919ca7.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/b4811e702a6884a9251d7cc9e3b06b6f.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/d518783c054695acf329e81d597fdec3.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/835ce09e785cca635c176008975053a1.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/769af780de81a302c0a3b03ed8e6c528.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/da34f99daf9141f0fe56a766461b8485.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/d7c9cd8722a2f9a78e158ce02ec5d4f2.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/09ea18953884b15227819e326103462b.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/5ef728213983842edf1aec27b2c1f5b6.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/95409f2a884dcfeaabfe5e61fcf9ec37.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/6807836dc2a940ba56ea10c7a63b14c9.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e1d976d06853e7a0e6c9cc4ab484ac8a.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/47f5673dec5005092f6d897d6335966c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/1b0109abd0e6a0d13fa2423a96c1167e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/916111a8f94cc0bd39375b3dcac14e35.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c1360df3d6b703c5df9b2f47a2a3d12e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/1d5a31eb93ef873a165993bd99f29df1.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/997a48948b89dd7261ed5a59ba884f45.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/eb96d9689735c9f4019ebf76da43b2b2.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/a92cf2172e6cafe080e4511205568d79.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c9e94570428f197292bb3f43609963f5.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/37145f06cce747311692ad7f276645db.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c9a698b71ed911364fc6f243006c241c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e89db969711efaa441c43d6b90498a0c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/3803bb1a18229562f18943512b1d3524.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/235cbb5be905ac2b87e7e8f7c8d90144.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/3e38435b3fdbae4ee80b83995592901e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/8ceb7cd3231585da60a74dd2c1aa9015.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e151e225c2e30aab7ccf086094381577.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/363c19306953daf10968f4aa86617997.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/4237a392cf2e69b110ad4ecf35e44059.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/da8ab35ada2dfe55006db01efa96e51a.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/aa1d4fd00b7879db3f1051dc6d16aa87.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/302a8f2d997ff22bedcd837672cdafc2.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/a39ff68c00522aef0472402958a334d2.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/86ccd0eb677c8b552398869d11a8917e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/a6d0ede352da947060d912d903646a5d.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e6a118bf95bdb61891409d25f193e9c4.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c214066e9bf65d60bcebd691b5b1cbc1.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c301559ba3ee280bcbf2fc4269bfa9ca.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/573748f5c12ecb4515ba00a7b6e981dc.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/27bcc8bf512a7e6f994a9683b3deea82.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e22a4507fd1e4b5ef859035e857ae419.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/27b07b4ca709c33ad71b368f87781307.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/ef31eb48bcb133728bffda7e1239b592.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/5f49aaaca59c0733ec92f100d01bc0af.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/818889261deb75044e1018ec53485d85.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/200369f023243e2faeb18a2a0a352ef1.jpg\" style=\"\" class=\"fr-fin\"></p><p><br></p>',1,'2017-08-30 11:40:11',1,0,1036000,0.00,0.00,1,'','https://mp123.oss-cn-shenzhen.aliyuncs.com/upload/20170908/092741972ad4b4.jpg','http://yanxuan.nosdn.127.net/1f67b1970ee20fd572b7202da0ff705d.png',2598.00,1533,1194000,0.00,'限时购','',0.00,0,0,0,2857.80,NULL,NULL,NULL,NULL);
+(1181000,1008008,'1181000','母亲节礼物-舒适安睡组合',1001020,100,'','安心舒适是最好的礼物','<p><img src=\"http://yanxuan.nosdn.127.net/3ddfe10db43f7df33ba82ae7570ada80.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/7682b7930b4776ce032f509c24a74a1e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e0bb6a50e27681925c5bb26bceb67ef4.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/ba63b244c74ce06fda82bb6a29cc0f71.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/3c7808c3a4769bad5af4974782f08654.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/71798aaac23a91fdab4d77e1b980a4df.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c88cbb2dd2310b732571f49050fe4059.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/5dfdcd654e0f3076f7c05dd9c19c15ea.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/bd55d6ef7af69422d8d76af10ee70156.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/bae571b22954c521b35e446d652edc1d.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e709c4d9e46d602a4d2125e47110f6ae.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/83e41915035c418db177af8b1eca385c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/f42c561e6935fe3e0e0873653da78670.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/8317726fbae80b98764dc4c6233a913e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/ba904b7c948b8015db2171435325270f.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/4969c73d0d8f29bffb69529c96ca4889.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/d80b9b8c5c31031d1cd5357e48748632.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/3fe79bdae40662a7b1feed3179d3dd1f.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/79eef059963b12479f65e782d1dca128.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e5a8f64f4297ccc01b41df98b0f252c8.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/a940b9e9525c4861407e4c3b07b02977.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/224b8b81cbe12e4ad060a50f1e26601a.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/85e151647452fad718effb7b1adc18e2.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/d47444ff3bb9dc0aa4ab1f9b84d83768.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/136262743f0c849cc0c55c8e7963dd7e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/331a97cbaff5b25a3b08ed7cdfe29df9.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/89b450aa0a8afe1db566dcad926f1fe8.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c1cf94f13b7280a97e751cebe573fa78.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/1822c23def83b77e7607c24237eeec74.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/2af234312b3914d6d0bc316f92134614.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c4f8ab2b3813275d954a8bedcf902d26.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/42f18842ff0c92ed849c4401ae47bb61.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/a8ea64a35799e50ab31ecb65345fe8f4.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/18759fa90cd153bdd744280807c3c155.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/431f00d068a8e747959deb3b7bdd495a.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/5bd3b44f1f4c627bfa39f7809e866ec6.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/7fc36778fe2f6129b9c26e8298c5be7e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c568432e3d5ab6786cd9dcae8008891b.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/ec82ff5aecafa48807117da68cce2ce9.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/b8eccbed570da595e6f8a71ed4abc42c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/9cae1fed6ecefcd61435fe6e2c700fd6.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e306a418f82777399f5e88b93cca22db.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/a66d717084e23864ce079f936557709f.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/6ae06c6505cdbf87a0210fe3b8727d5f.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/58ac2086725b0ba2fe800195f274a0b4.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/5e2e9d9eb099647fbe041ec6645ac034.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/8154357c0fab82bd4e67cda9aaa128c0.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/4325763b738ec3183ecf0d82b2b28e32.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/06d8ea9d10035a00f26c5c52cc601ca7.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/499f30b9e69b5dddf3db36f105756111.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/ed7e1733d54e711a560edb3a76f1a60c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/b6474347eebdb917d2e827fd526dd01c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/b2c0691f9204c5ebc94b4ff678919ca7.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/b4811e702a6884a9251d7cc9e3b06b6f.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/d518783c054695acf329e81d597fdec3.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/835ce09e785cca635c176008975053a1.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/769af780de81a302c0a3b03ed8e6c528.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/da34f99daf9141f0fe56a766461b8485.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/d7c9cd8722a2f9a78e158ce02ec5d4f2.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/09ea18953884b15227819e326103462b.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/5ef728213983842edf1aec27b2c1f5b6.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/95409f2a884dcfeaabfe5e61fcf9ec37.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/6807836dc2a940ba56ea10c7a63b14c9.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e1d976d06853e7a0e6c9cc4ab484ac8a.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/47f5673dec5005092f6d897d6335966c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/1b0109abd0e6a0d13fa2423a96c1167e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/916111a8f94cc0bd39375b3dcac14e35.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c1360df3d6b703c5df9b2f47a2a3d12e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/1d5a31eb93ef873a165993bd99f29df1.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/997a48948b89dd7261ed5a59ba884f45.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/eb96d9689735c9f4019ebf76da43b2b2.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/a92cf2172e6cafe080e4511205568d79.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c9e94570428f197292bb3f43609963f5.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/37145f06cce747311692ad7f276645db.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c9a698b71ed911364fc6f243006c241c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e89db969711efaa441c43d6b90498a0c.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/3803bb1a18229562f18943512b1d3524.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/235cbb5be905ac2b87e7e8f7c8d90144.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/3e38435b3fdbae4ee80b83995592901e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/8ceb7cd3231585da60a74dd2c1aa9015.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e151e225c2e30aab7ccf086094381577.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/363c19306953daf10968f4aa86617997.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/4237a392cf2e69b110ad4ecf35e44059.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/da8ab35ada2dfe55006db01efa96e51a.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/aa1d4fd00b7879db3f1051dc6d16aa87.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/302a8f2d997ff22bedcd837672cdafc2.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/a39ff68c00522aef0472402958a334d2.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/86ccd0eb677c8b552398869d11a8917e.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/a6d0ede352da947060d912d903646a5d.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e6a118bf95bdb61891409d25f193e9c4.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c214066e9bf65d60bcebd691b5b1cbc1.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/c301559ba3ee280bcbf2fc4269bfa9ca.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/573748f5c12ecb4515ba00a7b6e981dc.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/27bcc8bf512a7e6f994a9683b3deea82.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/e22a4507fd1e4b5ef859035e857ae419.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/27b07b4ca709c33ad71b368f87781307.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/ef31eb48bcb133728bffda7e1239b592.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/5f49aaaca59c0733ec92f100d01bc0af.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/818889261deb75044e1018ec53485d85.jpg\" style=\"\" class=\"fr-fin\"></p><p><img src=\"http://yanxuan.nosdn.127.net/200369f023243e2faeb18a2a0a352ef1.jpg\" style=\"\" class=\"fr-fin\"></p><p><br></p>',1,'2017-08-30 11:40:11',1,0,1036000,0.00,0.00,1,'','https://mp123.oss-cn-shenzhen.aliyuncs.com/upload/20170908/092741972ad4b4.jpg','http://yanxuan.nosdn.127.net/1f67b1970ee20fd572b7202da0ff705d.png',2598.00,1533,1194000,0.00,'限时购','',0.00,0,0,0,2857.80,NULL,NULL,NULL,NULL),
+(1181001,1036006,'2','HUAWEI Mate 40 RS ',1046001,10,'手机,保时捷','创新工艺与多重工序打造纳米微晶陶瓷。经典黑白，低调之中彰显纯粹。盈握间，光影流动，瞬息变幻。指尖上，温润轻抚，面面倾心。','<p><img class=\"fr-fin\" data-fr-image-preview=\"false\" alt=\"Image title\" src=\"http://yaaiya.xyz/data/shining/ad/20210111/103331580b782e.jpg\" width=\"300\"></p><p><img class=\"fr-fin\" data-fr-image-preview=\"false\" alt=\"Image title\" src=\"http://yaaiya.xyz/data/shining/ad/20210111/1033373847dc94.jpg\" width=\"300\"></p><p><img class=\"fr-fin\" data-fr-image-preview=\"false\" alt=\"Image title\" src=\"http://yaaiya.xyz/data/shining/ad/20210111/10334350981a89.jpg\" width=\"300\"></p><p><br></p>',1,'2021-01-11 10:27:33',1,0,1036003,NULL,NULL,1,NULL,'http://yaaiya.xyz/data/shining/ad/20210111/10262759311c2a.jpg','http://yaaiya.xyz/data/shining/ad/20210111/1027286089bdbc.jpg',22999.00,NULL,247,NULL,'奢华再现 经典闪耀 超跑基因 全面进化',NULL,NULL,0,0,1,26999.00,1,1,'2021-01-11 10:34:14',1);
 
 /*Table structure for table `nideshop_goods_attribute` */
 
@@ -2663,7 +2669,7 @@ CREATE TABLE `nideshop_goods_issue` (
   `question` varchar(500) DEFAULT NULL,
   `answer` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 /*Data for the table `nideshop_goods_issue` */
 
@@ -2671,7 +2677,8 @@ insert  into `nideshop_goods_issue`(`id`,`question`,`answer`) values
 (1,'购买运费如何收取？','单笔订单金额（不含运费）满88元免邮费；不满88元，每单收取10元运费。\n(港澳台地区需满'),
 (2,'使用什么快递发货？','严选默认使用顺丰快递发货（个别商品使用其他快递），配送范围覆盖全国大部分地区（港澳台地区除'),
 (3,'如何申请退货？','1.自收到商品之日起30日内，顾客可申请无忧退货，退款将原路返还，不同的银行处理时间不同，'),
-(4,'如何开具发票？','1.如需开具普通发票，请在下单时选择“我要开发票”并填写相关信息（APP仅限2.4.0及以');
+(4,'如何开具发票？','1.如需开具普通发票，请在下单时选择“我要开发票”并填写相关信息（APP仅限2.4.0及以'),
+(5,'退货的流程？','暂未开放退货功能');
 
 /*Table structure for table `nideshop_goods_specification` */
 
@@ -2686,7 +2693,7 @@ CREATE TABLE `nideshop_goods_specification` (
   PRIMARY KEY (`id`),
   KEY `goods_id` (`goods_id`),
   KEY `specification_id` (`specification_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='商品对应规格表值表';
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='商品对应规格表值表';
 
 /*Data for the table `nideshop_goods_specification` */
 
@@ -2695,7 +2702,9 @@ insert  into `nideshop_goods_specification`(`id`,`goods_id`,`specification_id`,`
 (2,1181000,1,'1.8m床垫*1+枕头*2',''),
 (3,1181000,2,'浅杏粉','http://yanxuan.nosdn.127.net/10022c73fa7aa75c2c0d736e96cc56d5.png?quality=90&thumbnail=200x200&imageView'),
 (4,1181000,2,'玛瑙红','http://yanxuan.nosdn.127.net/29442127f431a1a1801c195905319427.png?quality=90&thumbnail=200x200&imageView'),
-(5,1181000,2,'烟白灰','http://yanxuan.nosdn.127.net/36f64a7161b67e7fb8ea45be32ecfa25.png?quality=90&thumbnail=200x200&imageView');
+(5,1181000,2,'烟白灰','http://yanxuan.nosdn.127.net/36f64a7161b67e7fb8ea45be32ecfa25.png?quality=90&thumbnail=200x200&imageView'),
+(6,1181001,2,'长度：162.9 mm\n宽度：75.5 mm\n厚度：10.1 mm',NULL),
+(7,1181001,4,'约 234 克（含电池）\n*实际尺寸与重量依配置、制造工艺、测量方法的不同可能有所差异。',NULL);
 
 /*Table structure for table `nideshop_help_issue` */
 
@@ -2849,7 +2858,7 @@ CREATE TABLE `nideshop_product` (
   `retail_price` decimal(10,2) unsigned DEFAULT '0.00' COMMENT '零售价格',
   `market_price` decimal(10,2) unsigned DEFAULT '0.00' COMMENT '价格',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=247 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=248 DEFAULT CHARSET=utf8;
 
 /*Data for the table `nideshop_product` */
 
@@ -3099,7 +3108,8 @@ insert  into `nideshop_product`(`id`,`goods_id`,`goods_specification_ids`,`goods
 (243,1156006,'','1156006',100,699.00,0.00),
 (244,1166008,'','1166008',100,459.00,533.00),
 (245,1181000,'2_5','1181000',100,2578.00,3333.00),
-(246,1181000,'1_5','1181000',100,0.01,3333.00);
+(246,1181000,'1_5','1181000',100,0.01,3333.00),
+(247,1181001,'','1',10,22999.00,26999.00);
 
 /*Table structure for table `nideshop_related_goods` */
 
@@ -3358,7 +3368,7 @@ DROP TABLE IF EXISTS `nideshop_user`;
 CREATE TABLE `nideshop_user` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(60) NOT NULL DEFAULT '',
-  `password` varchar(32) DEFAULT '',
+  `password` varchar(256) DEFAULT '',
   `gender` tinyint(1) DEFAULT NULL,
   `birthday` datetime DEFAULT NULL,
   `register_time` datetime DEFAULT NULL,
@@ -3372,13 +3382,14 @@ CREATE TABLE `nideshop_user` (
   `weixin_openid` varchar(50) DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_name` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 /*Data for the table `nideshop_user` */
 
 insert  into `nideshop_user`(`id`,`username`,`password`,`gender`,`birthday`,`register_time`,`last_login_time`,`last_login_ip`,`user_level_id`,`nickname`,`mobile`,`register_ip`,`avatar`,`weixin_openid`) values 
-(1,'普通会员','',1,'2021-01-05 00:00:00',NULL,NULL,'',1,NULL,'13333333333','','',''),
-(3,'vip用户','',1,'2021-01-04 00:00:00',NULL,NULL,'',2,NULL,'14444444444','','','');
+(1,'普通会员','92925488b28ab12584ac8fcaa8a27a0f497b2c62940c8f4fbc8ef19ebc87c43e',1,'2021-01-05 00:00:00',NULL,NULL,'',1,'普通会员','13311111111','','',''),
+(3,'vip用户','',1,'2021-01-04 00:00:00',NULL,NULL,'',2,NULL,'14444444444','','',''),
+(4,'H5用户(888888)','92925488b28ab12584ac8fcaa8a27a0f497b2c62940c8f4fbc8ef19ebc87c43e',1,'2021-01-15 16:02:20',NULL,NULL,'',1,'测试用户H5','13333333333','','https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg','');
 
 /*Table structure for table `nideshop_user_coupon` */
 
@@ -3433,7 +3444,7 @@ CREATE TABLE `schedule_job` (
   `remark` varchar(255) DEFAULT NULL COMMENT '备注',
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`job_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='定时任务';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='定时任务';
 
 /*Data for the table `schedule_job` */
 
@@ -3519,7 +3530,7 @@ CREATE TABLE `sys_dept` (
   `order_num` int(11) DEFAULT NULL COMMENT '排序',
   `del_flag` tinyint(4) DEFAULT '0' COMMENT '是否删除  -1：已删除  0：正常',
   PRIMARY KEY (`dept_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='部门管理';
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='部门管理';
 
 /*Data for the table `sys_dept` */
 
@@ -3602,7 +3613,7 @@ CREATE TABLE `sys_menu` (
   `order_num` int(11) DEFAULT NULL COMMENT '排序',
   `status` int(1) DEFAULT NULL,
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=388 DEFAULT CHARSET=utf8 COMMENT='菜单管理';
+) ENGINE=InnoDB AUTO_INCREMENT=383 DEFAULT CHARSET=utf8 COMMENT='菜单管理';
 
 /*Data for the table `sys_menu` */
 
@@ -3802,7 +3813,7 @@ CREATE TABLE `sys_oss` (
   `url` varchar(200) DEFAULT NULL COMMENT 'URL地址',
   `create_date` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='文件上传';
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COMMENT='文件上传';
 
 /*Data for the table `sys_oss` */
 
@@ -3812,7 +3823,23 @@ insert  into `sys_oss`(`id`,`url`,`create_date`) values
 (5,'http://yaaiya.xyz/data/shining/ad/20210106/164756640394a.jpg','2021-01-06 16:47:57'),
 (6,'http://yaaiya.xyz/data/shining/ad/20210106/16515789274f4d.jpg','2021-01-06 16:51:59'),
 (7,'http://yaaiya.xyz/data/shining/ad/20210107/085303842ab819.jpg','2021-01-07 08:53:06'),
-(8,'http://yaaiya.xyz/data/shining/ad/20210107/08535674956d45.jpg','2021-01-07 08:53:58');
+(8,'http://yaaiya.xyz/data/shining/ad/20210107/08535674956d45.jpg','2021-01-07 08:53:58'),
+(9,'http://yaaiya.xyz/data/shining/ad/20210107/145547901cf3b1.jpg','2021-01-07 14:55:49'),
+(10,'http://yaaiya.xyz/data/shining/ad/20210107/145859987e58e8.jpg','2021-01-07 14:59:01'),
+(11,'http://yaaiya.xyz/data/shining/ad/20210107/150203593d1ccc.jpg','2021-01-07 15:02:05'),
+(12,'http://yaaiya.xyz/data/shining/ad/20210107/1502119917ef35.jpg','2021-01-07 15:02:13'),
+(13,'http://yaaiya.xyz/data/shining/ad/20210107/16263378703f21.jpg','2021-01-07 16:26:35'),
+(14,'http://yaaiya.xyz/data/shining/ad/20210107/16263846829768.jpg','2021-01-07 16:26:39'),
+(15,'http://yaaiya.xyz/data/shining/ad/20210107/162709773772e1.jpg','2021-01-07 16:27:11'),
+(16,'http://yaaiya.xyz/data/shining/ad/20210111/1010383862aa02.jpg','2021-01-11 10:10:39'),
+(17,'http://yaaiya.xyz/data/shining/ad/20210111/101323743f8dab.jpg','2021-01-11 10:13:25'),
+(18,'http://yaaiya.xyz/data/shining/ad/20210111/101538706312.jpg','2021-01-11 10:15:39'),
+(19,'http://yaaiya.xyz/data/shining/ad/20210111/1015438965a3f3.jpg','2021-01-11 10:15:45'),
+(20,'http://yaaiya.xyz/data/shining/ad/20210111/10262759311c2a.jpg','2021-01-11 10:26:29'),
+(21,'http://yaaiya.xyz/data/shining/ad/20210111/1027286089bdbc.jpg','2021-01-11 10:27:30'),
+(22,'http://yaaiya.xyz/data/shining/ad/20210111/103331580b782e.jpg','2021-01-11 10:33:33'),
+(23,'http://yaaiya.xyz/data/shining/ad/20210111/1033373847dc94.jpg','2021-01-11 10:33:38'),
+(24,'http://yaaiya.xyz/data/shining/ad/20210111/10334350981a89.jpg','2021-01-11 10:33:45');
 
 /*Table structure for table `sys_region` */
 
@@ -3954,7 +3981,7 @@ CREATE TABLE `sys_role` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   `dept_id` bigint(20) DEFAULT NULL COMMENT '部门ID',
   PRIMARY KEY (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='角色';
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='角色';
 
 /*Data for the table `sys_role` */
 
@@ -3973,7 +4000,7 @@ CREATE TABLE `sys_role_dept` (
   `role_id` bigint(20) DEFAULT NULL COMMENT '角色ID',
   `dept_id` bigint(20) DEFAULT NULL COMMENT '部门ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='角色与部门对应关系';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='角色与部门对应关系';
 
 /*Data for the table `sys_role_dept` */
 
@@ -3993,7 +4020,7 @@ CREATE TABLE `sys_role_menu` (
   `role_id` bigint(20) DEFAULT NULL COMMENT '角色ID',
   `menu_id` bigint(20) DEFAULT NULL COMMENT '菜单ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=271 DEFAULT CHARSET=utf8 COMMENT='角色与菜单对应关系';
+) ENGINE=InnoDB AUTO_INCREMENT=193 DEFAULT CHARSET=utf8 COMMENT='角色与菜单对应关系';
 
 /*Data for the table `sys_role_menu` */
 
@@ -4222,6 +4249,10 @@ CREATE TABLE `tb_token` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户Token';
 
 /*Data for the table `tb_token` */
+
+insert  into `tb_token`(`user_id`,`token`,`expire_time`,`update_time`) values 
+(1,'1586ejsyvf2xtm2rhzt6i07zaobjpr63','2021-02-14 15:57:33','2021-01-15 15:57:33'),
+(4,'5el508lh1litceya2vyai6n5ptsx1q9d','2021-02-18 09:23:31','2021-01-19 09:23:31');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
